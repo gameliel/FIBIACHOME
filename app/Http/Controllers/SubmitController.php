@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Submit;
+use Image;
 
 class SubmitController extends Controller
 {
@@ -43,7 +44,7 @@ class SubmitController extends Controller
            'area' => 'required',
            'bedroom' => 'required',
            'bathroom' => 'required',
-           'image' => 'required|image|max:2048',
+           'image' => 'required|image|max:2048|mimes:jpeg,png,jpg,gif,svg',
            'address' => 'required',
            'city' => 'required',
            'state' => 'required',
