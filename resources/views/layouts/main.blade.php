@@ -66,7 +66,7 @@
 					</div>
 					<ul class="menu">
 						<li><a href="{{ url('/')}}">Home</a></li>
-						<li><a href="{{ route('submits.index')}}">Listing</a></li>
+						<li><a href="{{ route('propertylisting.index')}}">Listing</a></li>
 						<li><a href="{{ url('about')}}">About</a></li>
 						<li><a href="{{ url('faq')}}">Faq</a></li>
 						<li><a href="{{ url('pricing')}}">Subscribe Now</a></li>

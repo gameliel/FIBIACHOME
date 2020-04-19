@@ -26,38 +26,38 @@
 					</div> -->
 
 					<div class="row">
-					@foreach($submits as $submit)
+					@foreach($PropertyListings as $PropertyListing)
 						<div class="col-lg-4 col-md-6">
 							<div class="property_item classical-list">
                             
 								<div class="image">
-									<a href="twin_est.php">
-										<img src="{{ $submit->gallery}}" alt="latest property" style="height: 278px;" class="img-fluid">
+									<a href="#">
+										<img src="{{ $PropertyListing->gallery}}" alt="latest property" style="height: 278px;" class="img-fluid">
 									</a>
 									<div class="sb-date">
 										<span class="tag"><i></i>APPROVED</span>
 									</div>
-									<span class="tag_t">{{$submit->status}}</span>
+									<span class="tag_t">{{$PropertyListing->property_status}}</span>
 								</div>
 								<div class="proerty_content">
 									<div class="proerty_text">
-									  <h3 class="captlize"><a href="#">{{$submit->title}}</a></h3>
-									  <p class="proerty_price">{{$submit->price}}</p>
+									  <h3 class="captlize"><a href="#">{{$PropertyListing->title}}</a></h3>
+									  <p class="proerty_price">{{$PropertyListing->property_price}}</p>
 									</div>
-									<p class="property_add">{{ $submit->address}}</p>
+									<p class="property_add">{{ $PropertyListing->property_address}}</p>
 									<div class="property_meta">
 									  <div class="list-fx-features">
 											<div class="listing-card-info-icon">
-												<span class="inc-fleat inc-bed">{{ $submit->bedroom }}</span>
+												<span class="inc-fleat inc-bed">{{ $PropertyListing->bedroom }}</span>
 											</div>
 											<div class="listing-card-info-icon">
-												<span class="inc-fleat inc-type">{{$submit->type}}</span>
+												<span class="inc-fleat inc-type">{{$PropertyListing->property_type}}</span>
 											</div>
 											<div class="listing-card-info-icon">
-												<span class="inc-fleat inc-area">{{$submit->area}}</span>
+												<span class="inc-fleat inc-area">{{$PropertyListing->property_area}}</span>
 											</div>
 											<div class="listing-card-info-icon">
-												<span class="inc-fleat inc-bath">{{$submit->bathroom}}</span>
+												<span class="inc-fleat inc-bath">{{$PropertyListing->bathroom}}</span>
 											</div>
 										</div>
 									</div>
@@ -72,7 +72,7 @@
 					@endforeach
                         </div>
 			</div>
-			{{ $submits->links() }}
+			{{ $PropertyListings->links() }}
 	</div>
 	</div>
 

@@ -22,7 +22,7 @@
 	         <div class="container">
 	             <div class="row">
 	                 <div class="col-lg-12 col-md-12">
-	                     <form action="{{ route('submits.store')}}" method="POST" enctype="multipart/form-data">
+	                     <form action="{{ route('propertylisting.store')}}" method="POST" enctype="multipart/form-data">
 	                         @csrf
 
 	                         <div class="alert alert-info" role="alert">
@@ -50,7 +50,7 @@
 
 	                                     <div class="form-group col-md-6">
 	                                         <label>Status</label>
-	                                         <select id="status" name="status" class="form-control">
+	                                         <select id="status" name="property_status" class="form-control">
 	                                             <option value="">&nbsp;</option>
 	                                             <option value="For rent" name="For rent">For Rent</option>
 	                                             <option value="For sale" name="For sale">For Sale</option>
@@ -59,7 +59,7 @@
 
 	                                     <div class="form-group col-md-6">
 	                                         <label>Property Type</label>
-	                                         <select id="ptypes" name="type" class="form-control">
+	                                         <select id="ptypes" name="property_type" class="form-control">
 	                                             <option value="">&nbsp;</option>
 	                                             <option value="Houses" name="Houses">Houses</option>
 	                                             <option value="Apartment" name="Apartment">Apartment</option>
@@ -72,12 +72,12 @@
 
 	                                     <div class="form-group col-md-6">
 	                                         <label>Price</label>
-	                                         <input type="text" name="price" class="form-control" placeholder="USD">
+	                                         <input type="text" name="property_price" class="form-control" placeholder="USD">
 	                                     </div>
 
 	                                     <div class="form-group col-md-6">
 	                                         <label>Area</label>
-	                                         <input type="text" name="area" class="form-control">
+	                                         <input type="text" name="property_area" class="form-control">
 	                                     </div>
 
 	                                     <div class="form-group col-md-6">
@@ -131,7 +131,7 @@
 
 	                                     <div class="form-group col-md-6">
 	                                         <label>Address</label>
-	                                         <input type="text" name="address" class="form-control">
+	                                         <input type="text" name="property_address" class="form-control">
 	                                     </div>
 
 	                                     <div class="form-group col-md-6">
@@ -161,7 +161,7 @@
 
 	                                     <div class="form-group col-md-12">
 	                                         <label>Description</label>
-	                                         <textarea class="form-control h-120" name="description"></textarea>
+	                                         <textarea class="form-control h-120" name="property_description"></textarea>
 	                                     </div>
 
 	                         <div class="form-group col-lg-12 col-md-12">

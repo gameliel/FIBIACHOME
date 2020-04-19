@@ -18,4 +18,4 @@ Route::get('faq', 'PagesController@faq');
 Route::get('pricing', 'PagesController@pricing');
 Route::get('submit', 'PagesController@submit');
 Route::resource('/contact', 'ContactController', ['except' => ['show','create', 'index', 'update', 'edit', 'destroy']]);
-Route::resource('/submits', 'SubmitController');
+Route::resource('/propertylisting', 'PropertyListingController');
