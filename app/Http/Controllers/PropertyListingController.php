@@ -15,7 +15,8 @@ class PropertyListingController extends Controller
      */
     public function index()
     {
-        return view('propertylisting.index')->with('PropertyListings', PropertyListing::paginate(6));
+        return view('propertylisting.index')
+        ->with('PropertyListings', PropertyListing::paginate(6));
     }
 
     /**
@@ -51,13 +52,13 @@ class PropertyListingController extends Controller
             'zip_code' => 'required',
             'property_description' => 'required'
          ]);
- 
+
           $image = $request->file('image');
- 
+
           $new_name = rand() . '.' . $image->
                  getClientOriginalExtension();
          $image->move(public_path('images'), $new_name);
- 
+
          $form_data = array(
              'title' => $request->title,
              'property_status' => $request->property_status,
@@ -75,7 +76,7 @@ class PropertyListingController extends Controller
          );
          Propertylisting::create($form_data);
          return redirect('propertylisting');
- 
+
     }
 
     /**

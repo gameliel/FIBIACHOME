@@ -13,7 +13,7 @@
 			<!-- ============================ Hero Banner End ================================== -->
 			<div class="search-header-banner">
 				<div class="container">
-					
+
 			<!-- =========================== All Property =============================== -->
 			<section>
 
@@ -29,10 +29,10 @@
 					@foreach($PropertyListings as $PropertyListing)
 						<div class="col-lg-4 col-md-6">
 							<div class="property_item classical-list">
-                            
+
 								<div class="image">
 									<a href="#">
-										<img src="{{ $PropertyListing->gallery}}" alt="latest property" style="height: 278px;" class="img-fluid">
+										<img src="{{asset('assets/img/'.$PropertyListing->image)}}" alt="latest property" style="height: 278px;" class="img-fluid">
 									</a>
 									<div class="sb-date">
 										<span class="tag"><i></i>APPROVED</span>
@@ -61,7 +61,7 @@
 											</div>
 										</div>
 									</div>
-                            
+
 									<div class="property_links">
 										<a href="tel:09026190497" class="btn btn-theme" data-tracked-action="call-us">Call Now</a>
 										<a href="mailto:info@fibiac.com" data-tracked-action="mail-us" class="btn btn-theme-light">Mail now</a>
